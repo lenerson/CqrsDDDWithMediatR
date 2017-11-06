@@ -1,2 +1,11 @@
+/.vs/
 /src/CqrsDDDWithMediatR/bin/
 /src/CqrsDDDWithMediatR/obj/
+/src/CqrsDDDWithMediatR.Domain/bin/
+/src/CqrsDDDWithMediatR.Domain/obj/
+/src/CqrsDDDWithMediatR.Infra.CrossCutting.Util/bin/
+/src/CqrsDDDWithMediatR.Infra.CrossCutting.Util/obj/
+/src/CqrsDDDWithMediatR.Infra.Data.Context/bin/
+/src/CqrsDDDWithMediatR.Infra.Data.Context/obj/
+/src/CqrsDDDWithMediatR.Infra.Data.Repository/bin/
+/src/CqrsDDDWithMediatR.Infra.Data.Repository/obj/
