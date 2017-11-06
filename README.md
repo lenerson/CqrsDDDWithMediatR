@@ -1,2 +1,2 @@
 # CqrsDDDWithMediatR
-Simple application example with use of architecture CQRS, approach DDD and library MediatR.
+Simple application example with use of architecture pattern CQRS, approach DDD and library MediatR.
