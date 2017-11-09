@@ -1,10 +1,10 @@
 ﻿using MediatR;
 
-namespace CqrsDDDWithMediatR.Domain.Notifications.User
+namespace CqrsDDDWithMediatR.Domain.Events.User
 {
-    public sealed class RegisteredUserNotification : INotification
+    public sealed class RegisteredUserEvent : INotification
     {
-        public RegisteredUserNotification(string name, string email)
+        public RegisteredUserEvent(string name, string email)
         {
             Name = name;
             Email = email;

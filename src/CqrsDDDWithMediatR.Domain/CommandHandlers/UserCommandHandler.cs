@@ -1,10 +1,11 @@
-﻿using CqrsDDDWithMediatR.Domain.Interfaces.Repositories.User;
-using CqrsDDDWithMediatR.Domain.Notifications.User;
+﻿using CqrsDDDWithMediatR.Domain.Commands.User;
+using CqrsDDDWithMediatR.Domain.Interfaces.Repositories.User;
+using CqrsDDDWithMediatR.Domain.Events.User;
 using MediatR;
 using System;
 using System.Threading.Tasks;
 
-namespace CqrsDDDWithMediatR.Domain.Commands.User
+namespace CqrsDDDWithMediatR.Domain.CommandHandlers.User
 {
     public sealed class UserCommandHandler :
         IAsyncRequestHandler<RegisterUserCommand>,
@@ -33,7 +34,7 @@ namespace CqrsDDDWithMediatR.Domain.Commands.User
 
             await userWriteRepository.Add(Models.User.CreateToInsert(message.Name, message.Email, message.Password));
 
-            await mediator.Publish(new RegisteredUserNotification(message.Name, message.Email));
+            await mediator.Publish(new RegisteredUserEvent(message.Name, message.Email));
         }
         public async Task Handle(UpdateUserCommand message)
         {
