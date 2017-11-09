@@ -8,8 +8,10 @@ namespace CqrsDDDWithMediatR.Infra.Data.Context.Mappings
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+
             builder
-                .Property(x => x.Id);
+                .Property(x => x.Id)
+                .ValueGeneratedOnAdd();
             builder
                 .Property(x => x.Name)
                 .HasColumnType("varchar(100)")
