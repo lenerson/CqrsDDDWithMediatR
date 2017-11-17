@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CqrsDDDWithMediatR.Domain.Interfaces.Repositories.User;
+using CqrsDDDWithMediatR.Domain.Models;
 using CqrsDDDWithMediatR.Infra.Data.Repository.Dapper;
 using CqrsDDDWithMediatR.Infra.Data.Repository.EntityFramework;
 using MediatR;
@@ -32,7 +33,7 @@ namespace CqrsDDDWithMediatR
             services.AddTransient(typeof(IUserWriteRepository), typeof(UserWriteRepository));
             services.AddTransient(typeof(IUserReadRepository), typeof(UserReadRepository));
 
-            services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(User).GetTypeInfo().Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
